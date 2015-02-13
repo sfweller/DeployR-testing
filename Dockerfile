@@ -21,10 +21,10 @@ RUN wget http://cran.revolutionanalytics.com/src/base/R-3/R-3.1.1.tar.gz \
 ## End of root user operations
 
 # Now add a non-root user to install DeployR Open
-RUN useradd deployr-user \
-&& su - deployr-user
+RUN useradd deployr-user
 
-RUN mkdir $HOME/Downloads \
+RUN su - deployr-user \
+&& mkdir $HOME/Downloads \
 && cd $HOME/Downloads \
 && wget http://seajenkins.revolution-computing.com/job/DeployR-Trunk-xPlatform-Core/lastSuccessfulBuild/artifact/buildArtifacts/DeployR-Open-Linux-7.4.0.tar.gz \
 && tar xzf DeployR-Open-Linux-7.4.0.tar.gz
