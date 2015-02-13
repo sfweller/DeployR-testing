@@ -22,7 +22,7 @@ RUN wget http://cran.revolutionanalytics.com/src/base/R-3/R-3.1.1.tar.gz \
 
 # Now add a non-root user to install DeployR Open
 RUN useradd deployr-user \
-&& sudo su - deployr-user
+&& su - deployr-user
 
 RUN mkdir $HOME/Downloads \
 && cd $HOME/Downloads \
