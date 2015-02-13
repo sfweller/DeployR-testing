@@ -9,7 +9,7 @@ MAINTAINER "Stephen Weller" stephen.weller@revolutionanalytics.com
 WORKDIR /root
 
 RUN yum update -y \
-&& yum install -y tar nano sudo nfs-utils-lib curl wget perl java-1.7.0-openjdk-devel cairo-devel libpng-devel tk-devel libicu libXt-devel readline readline-devel glibc-devel gcc gcc-gfortran gcc-c++ make ed
+&& yum install -y which tar nano sudo nfs-utils-lib curl wget perl java-1.7.0-openjdk-devel cairo-devel libpng-devel tk-devel libicu libXt-devel readline readline-devel glibc-devel gcc gcc-gfortran gcc-c++ make ed
 
 ## Test with CRAN R 3.1.1
 RUN wget http://cran.revolutionanalytics.com/src/base/R-3/R-3.1.1.tar.gz \
